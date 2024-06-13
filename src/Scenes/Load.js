@@ -25,6 +25,16 @@ class Load extends Phaser.Scene {
             frameWidth: 24,
             frameHeight: 24
         });
+
+        // Load particle effects
+        this.load.multiatlas("kenny-particles", "kenny-particles.json");
+
+        // Load bitmap font
+        this.load.bitmapFont('kenneyPixelSquareFont', 'kenney_pixel_square_font_0.png', 'kenney_pixel_square_font.fnt');
+
+        // Load audio
+        this.load.audio("playerMoving", "footstep_grass_004.ogg");
+        this.load.audio("collectCoin", "glass_004.ogg");
     }
 
     create() {
